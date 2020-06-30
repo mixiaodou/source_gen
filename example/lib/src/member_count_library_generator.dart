@@ -10,11 +10,13 @@ import 'utils.dart';
 class MemberCountLibraryGenerator extends Generator {
   @override
   String generate(LibraryReader library, BuildStep buildStep) {
+    print('------------a ${library.element.source.uri}');
     final topLevelVarCount = topLevelNumVariables(library).length;
 
-    return '''
-// Source library: ${library.element.source.uri}
-const topLevelNumVarCount = $topLevelVarCount;
-''';
+    return '';
+//    return '''
+//// Source library: ${library.element.source.uri}
+//const topLevelNumVarCount = $topLevelVarCount;
+//''';
   }
 }

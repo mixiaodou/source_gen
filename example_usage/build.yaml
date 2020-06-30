@@ -4,10 +4,14 @@ targets:
     builders:
       # Configure the builder `pkg_name|builder_name`
       # In this case, the member_count builder defined in `../example`
+      #-----------指定 代码构建器的 目标作用域
       source_gen_example|member_count:
         # Only run this builder on the specified input.
+        #---------指定 代码构建器的 目标文件
         generate_for:
-          - lib/library_source.dart
+          #- lib/library_source.dart
+          - lib/*.dart
+
       source_gen_example|property_sum:
         generate_for:
           - lib/*.dart
@@ -19,5 +23,5 @@ targets:
       source_gen|combining_builder:
         options:
           ignore_for_file:
-          - lint_a
-          - lint_b
+            - lint_a
+            - lint_b
