@@ -13,10 +13,11 @@ class MemberCountLibraryGenerator extends Generator {
     print('------------a ${library.element.source.uri}');
     final topLevelVarCount = topLevelNumVariables(library).length;
 
-    return '';
-//    return '''
-//// Source library: ${library.element.source.uri}
-//const topLevelNumVarCount = $topLevelVarCount;
-//''';
+//   return '';//如果 返回空数据，不生成对应的dart文件
+
+    return '''
+    // Source library: ${library.element.source.uri}
+      const topLevelNumVarCount = $topLevelVarCount;
+    ''';
   }
 }

@@ -1,11 +1,8 @@
 import 'package:source_gen_example/annotations.dart';
 
 part 'test.g.dart';
+
 int d = 009;
-
-String e = '10';
-
-num f = 12;
 
 //自己 创建的
 @Multiplier(9)
@@ -16,8 +13,9 @@ class Test {
   int b = 008;
 
   num c = 5;
-}
 
+  void abc() {}
+}
 
 /// source_gen 中的 扫描器，只扫描顶层element
 /// source_gen 中的 builder有两种：

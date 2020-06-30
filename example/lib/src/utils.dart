@@ -12,4 +12,7 @@ Iterable<TopLevelVariableElement> topLevelNumVariables(LibraryReader reader) =>
     reader.allElements.whereType<TopLevelVariableElement>().where((element) =>
         element.type.isDartCoreNum ||
         element.type.isDartCoreInt ||
-        element.type.isDartCoreDouble);
+        element.type.isDartCoreDouble||
+        element.type.isDartCoreString||
+        element.type.isDartCoreFunction
+    );
